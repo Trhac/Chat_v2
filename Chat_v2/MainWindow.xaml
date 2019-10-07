@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Chat_v2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        Closing="Window_Closing">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="89*"/>
+            <ColumnDefinition Width="307*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="textBlockMessages" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.5,-0.524" Height="316" Width="200" Grid.ColumnSpan="2"/>
+        <Button x:Name="buttonSend" Content="Send" HorizontalAlignment="Left" Margin="135,391,0,0" VerticalAlignment="Top" Width="75" Click="ButtonSend_Click" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="textBoxSendMessage" HorizontalAlignment="Left" Height="23" Margin="10,388,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxUsername" HorizontalAlignment="Left" Height="23" Margin="10,360,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="textBlockStatus" HorizontalAlignment="Left" Margin="237.903,393,0,0" TextWrapping="Wrap" Text="Status" VerticalAlignment="Top" Width="366" Grid.Column="1"/>
+        <Button x:Name="buttonConnect" Content="Connect" Grid.Column="1" HorizontalAlignment="Left" Margin="115,50,0,0" VerticalAlignment="Top" Width="75" Click="ButtonConnect_Click"/>
+        <Button x:Name="buttonDisconnect" Content="Disconnect" Grid.Column="1" HorizontalAlignment="Left" Margin="115,75,0,0" VerticalAlignment="Top" Width="75" Click="ButtonDisconnect_Click"/>
+
     </Grid>
 </Window>
